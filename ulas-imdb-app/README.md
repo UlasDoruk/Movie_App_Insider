@@ -1,4 +1,4 @@
-# beyza-imdb-app
+# ulasdk-imdb-app
 
 ## Project setup
 ```
