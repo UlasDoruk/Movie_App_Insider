@@ -1,5 +1,5 @@
 {
-  "name": "beyza-imdb-app",
+  "name": "ulas-imdb-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -42,5 +42,9 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "author": "",
+  "license": "ISC"
 }
