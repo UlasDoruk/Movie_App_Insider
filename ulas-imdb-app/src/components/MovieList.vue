@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 <template>
   <div>
     <h2>Film Listesi</h2>
