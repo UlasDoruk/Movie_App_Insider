@@ -1,13 +1,14 @@
 <template>
   <div>
     <div class="search-bar-container bg-blue-500 text-white p-4 ">
-      <h2 class="bg-blue-500 text-white p-4 bg-blue-900		text-white rounded mr-4 ml-4 h-1/2">Film Listesi</h2>
+      <h2 class="bg-blue-500 text-white p-4 bg-blue-900	font-bold	font-mono text-white rounded mr-4 ml-4 h-1/2">Film
+        List</h2>
       <input type="text" v-model="searchQuery" placeholder="Search for a movie..."
         class="search-bar text-left	 block w-4/5 p-4 ps-10 text-sm text-black border border-white-300 bg-white-50  dark:border-grey-600 dark:placeholder-white-400 dark:text-black" />
       <button class="hidden">Search</button>
     </div>
     <ul>
-      <li v-for="item in filteredMovies" :key="item.id">
+      <li class="min-h-[450px] w-[300px] mt-[10px] mb-[10px]" v-for="item in filteredMovies" :key="item.id">
         <MovieCard :movie="item" showFavoriteButton />
       </li>
     </ul>
@@ -78,13 +79,6 @@ ul {
   gap: 20px;
   justify-content: center;
   align-items: center;
-}
-
-li {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  width: 200px;
 }
 
 .relase-date {

@@ -1,14 +1,18 @@
 <template>
-  <div class="movie-card rounded">
-    <img class="movie-poster" :src="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" :alt="movie.title" />
-    <p class="movie-name">{{ movie.title }}</p>
-    <p class="release-date">{{ movie.release_date }}</p>
-    <span>{{ Math.floor(movie.vote_average) }}</span>
-
-    <button v-if="showFavoriteButton" @click="toggleFavorite(movie)">
-      <span v-if="isFavorited(movie.id)">★</span>
-      <span v-else>☆</span>
-    </button>
+  <div class="movie-card flex flex-col gap-2">
+    <img class="movie-poster shadow-md rounded-lg" :src="'https://image.tmdb.org/t/p/w500/' + movie.poster_path"
+      :alt="movie.title" />
+    <div class="text-left	p-2 font-bold	text-slate-800 rounded-lg">
+      <p class="movie-name text-[16px] mn-h-[40px] font-bold	 text-left">{{ movie.title }}</p>
+      <p class="release-date pt-2 text-[12px] pb-2 text-left">{{ movie.release_date }}</p>
+      <div class="flex  w-full items-center rounded-lg ">
+        <span class="">{{ Math.floor(movie.vote_average) }}</span>
+        <button class="ml-1" v-if="showFavoriteButton" @click="toggleFavorite(movie)">
+          <span v-if="isFavorited(movie.id)">★</span>
+          <span v-else>☆</span>
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -40,17 +44,6 @@ export default {
 .movie-poster {
   width: 100%;
   height: auto;
-}
-
-.movie-name {
-  font-size: 16px;
-  font-weight: bold;
-  min-height: 40px;
-}
-
-.release-date {
-  font-size: 12px;
-  color: #666;
 }
 
 button {
