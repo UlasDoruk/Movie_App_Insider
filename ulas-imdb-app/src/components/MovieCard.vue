@@ -1,5 +1,5 @@
 <template>
-  <div class="movie-card">
+  <div class="movie-card rounded">
     <img class="movie-poster" :src="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" :alt="movie.title" />
     <p class="movie-name">{{ movie.title }}</p>
     <p class="release-date">{{ movie.release_date }}</p>

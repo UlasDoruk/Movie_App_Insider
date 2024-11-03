@@ -1,8 +1,10 @@
 <template>
   <div>
-    <h2 class="bg-blue-500 text-white p-4 rounded-lg">Film Listesi</h2>
-    <div class="search-bar-container">
-      <input type="text" v-model="searchQuery" placeholder="Search for a movie..." class="search-bar" />
+    <div class="search-bar-container bg-blue-500 text-white p-4 ">
+      <h2 class="bg-blue-500 text-white p-4 bg-blue-900		text-white rounded mr-4 ml-4 h-1/2">Film Listesi</h2>
+      <input type="text" v-model="searchQuery" placeholder="Search for a movie..."
+        class="search-bar text-left	 block w-4/5 p-4 ps-10 text-sm text-black border border-white-300 bg-white-50  dark:border-grey-600 dark:placeholder-white-400 dark:text-black" />
+      <button class="hidden">Search</button>
     </div>
     <ul>
       <li v-for="item in filteredMovies" :key="item.id">
@@ -11,6 +13,7 @@
     </ul>
   </div>
 </template>
+
 
 <script>
 import { ref, computed } from 'vue';
@@ -102,8 +105,6 @@ li {
 
 .search-bar-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .search-bar {

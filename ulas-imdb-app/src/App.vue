@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <nav>
+  <div class="bg-white-100" id="app">
+    <nav class="w-full bg-blue-900 text-gray-100">
       <router-link to="/">Home</router-link>
       <router-link to="/favorites">Favorites</router-link>
     </nav>
@@ -25,6 +25,5 @@ nav {
 nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: #007bff;
 }
 </style>

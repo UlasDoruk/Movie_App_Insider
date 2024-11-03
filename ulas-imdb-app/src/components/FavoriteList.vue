@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h2>Favorite Movies</h2>
-    <h1>{{ favorites.length }}</h1>
+  <div class="flex items-center justify-center flex-col	gap-y-5">
+    <h2 class="flex items-center justify-center text-white rounded-lg text-nowrap p-3 mt-5 bg-sky-300">Favorite Movies</h2>
+    <h1 class="text-white rounded w-24 bg-sky-300">{{ favorites.length }}</h1>
     <ul>
       <li v-for="item in favorites" :key="item.id">
         <MovieCard :movie="item" />
