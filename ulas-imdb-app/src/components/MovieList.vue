@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Film Listesi</h2>
+    <h2 class="bg-blue-500 text-white p-4 rounded-lg">Film Listesi</h2>
     <div class="search-bar-container">
       <input type="text" v-model="searchQuery" placeholder="Search for a movie..." class="search-bar" />
     </div>
